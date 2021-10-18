@@ -9,13 +9,56 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    @IBOutlet private weak var timeTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocalNotification()
     }
 
+    @IBAction private func setTimerButtonDidTap(_ sender: Any) {
+        guard let time = timeTextField.text else { return }
+        setTime(time: Int(time) ?? 10)
+    }
+
 }
 
+// MARK: - 何秒後か指定
+extension ViewController {
+    
+    private func setTime(time: Int) {
+        let content = makeNotificationContent()
+        let trigger = makeTimeIntervalNotificationTrigger(time: time)
+        let request = makeNotificationRequest(content: content, trigger: trigger)
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { error in
+            if let error = error {
+                print(error)
+            } else {
+                print("通知設定完了")
+            }
+        }
+    }
+    
+    private func makeTimeIntervalNotificationTrigger(time: Int) -> UNTimeIntervalNotificationTrigger {
+        UNTimeIntervalNotificationTrigger(
+            timeInterval: TimeInterval(time),
+            repeats: false
+        )
+    }
+    
+    private func makeNotificationRequest(content: UNMutableNotificationContent,
+                                         trigger: UNTimeIntervalNotificationTrigger) -> UNNotificationRequest {
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content,
+                                            trigger: trigger)
+        return request
+    }
+
+}
+
+// MARK: - 時間指定
 extension ViewController {
     
     private func setupLocalNotification() {
@@ -54,7 +97,7 @@ extension ViewController {
     }
     
     private func makeNotificationRequest(content: UNMutableNotificationContent,
-                             trigger: UNCalendarNotificationTrigger) -> UNNotificationRequest {
+                                         trigger: UNCalendarNotificationTrigger) -> UNNotificationRequest {
         let uuidString = UUID().uuidString
         let request = UNNotificationRequest(identifier: uuidString,
                                             content: content,

@@ -15,9 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-ap-2ls">
+                                <rect key="frame" x="150" y="144" width="114" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWS-rF-vWR">
+                                <rect key="frame" x="173.5" y="228" width="67" height="31"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="セット"/>
+                                <connections>
+                                    <action selector="setTimerButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGU-eZ-Z3D"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="jwA-ap-2ls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="3ey-XU-5i2"/>
+                            <constraint firstItem="jwA-ap-2ls" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Bco-My-Y0A"/>
+                            <constraint firstItem="jwA-ap-2ls" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VVR-3g-TmM"/>
+                            <constraint firstItem="lWS-rF-vWR" firstAttribute="top" secondItem="jwA-ap-2ls" secondAttribute="bottom" constant="50" id="lZr-ua-taW"/>
+                            <constraint firstItem="lWS-rF-vWR" firstAttribute="centerX" secondItem="jwA-ap-2ls" secondAttribute="centerX" id="uuL-aJ-lRd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeTextField" destination="jwA-ap-2ls" id="cro-p6-nGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,6 +53,9 @@
     <resources>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
