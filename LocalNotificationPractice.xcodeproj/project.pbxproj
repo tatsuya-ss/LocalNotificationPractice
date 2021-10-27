@@ -13,6 +13,7 @@
 		75003191271C3A7000971701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7500318F271C3A7000971701 /* Main.storyboard */; };
 		75003193271C3A7300971701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75003192271C3A7300971701 /* Assets.xcassets */; };
 		75003196271C3A7300971701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75003194271C3A7300971701 /* LaunchScreen.storyboard */; };
+		75CC67D527279DA700AE4292 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC67D427279DA700AE4292 /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		75003192271C3A7300971701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75003195271C3A7300971701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75003197271C3A7300971701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75CC67D427279DA700AE4292 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				75003189271C3A7000971701 /* AppDelegate.swift */,
 				7500318B271C3A7000971701 /* SceneDelegate.swift */,
 				7500318D271C3A7000971701 /* ViewController.swift */,
+				75CC67D427279DA700AE4292 /* Timer.swift */,
 				7500318F271C3A7000971701 /* Main.storyboard */,
 				75003192271C3A7300971701 /* Assets.xcassets */,
 				75003194271C3A7300971701 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				7500318E271C3A7000971701 /* ViewController.swift in Sources */,
 				7500318A271C3A7000971701 /* AppDelegate.swift in Sources */,
 				7500318C271C3A7000971701 /* SceneDelegate.swift in Sources */,
+				75CC67D527279DA700AE4292 /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

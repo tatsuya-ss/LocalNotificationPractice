@@ -9,18 +9,33 @@ import UIKit
 
 final class ViewController: UIViewController {
 
-    @IBOutlet private weak var timeTextField: UITextField!
+    @IBOutlet private weak var firstTimeTextField: UITextField!
+    @IBOutlet private weak var secondTimeTextField: UITextField!
+    @IBOutlet private weak var thirdTimeTextField: UITextField!
+    @IBOutlet private weak var displayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocalNotification()
     }
-
+    
     @IBAction private func setTimerButtonDidTap(_ sender: Any) {
-        guard let time = timeTextField.text else { return }
-        setTime(time: Int(time) ?? 10)
+        guard let firstTime = firstTimeTextField.text,
+        let secondTime = secondTimeTextField.text,
+        let thirdTime = thirdTimeTextField.text else { return }
+        let times = [firstTime, secondTime, thirdTime].map { Int($0) ?? 0 }
+        let countDown = CountDown(counts: times)
+        countDown.displayCount = { time in
+            self.displayLabel.text = String(time)
+        }
+        times.enumerated()
+            .forEach {
+                let time = times[0...$0.offset].reduce(0, +)
+                setTime(time: time)
+            }
+        countDown.start()
     }
-
+    
 }
 
 // MARK: - 何秒後か指定

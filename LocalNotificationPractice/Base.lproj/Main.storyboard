@@ -17,12 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-ap-2ls">
-                                <rect key="frame" x="150" y="144" width="114" height="34"/>
+                                <rect key="frame" x="150" y="94" width="114" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFu-HX-ijX">
+                                <rect key="frame" x="150" y="136" width="114" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWS-rF-vWR">
-                                <rect key="frame" x="173.5" y="228" width="67" height="31"/>
+                                <rect key="frame" x="150" y="232" width="114" height="31"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="セット"/>
@@ -30,19 +35,43 @@
                                     <action selector="setTimerButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGU-eZ-Z3D"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-u6-kDQ">
+                                <rect key="frame" x="186" y="65" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONC-vA-jyd">
+                                <rect key="frame" x="150" y="178" width="114" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="jwA-ap-2ls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="3ey-XU-5i2"/>
-                            <constraint firstItem="jwA-ap-2ls" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Bco-My-Y0A"/>
+                            <constraint firstItem="bFu-HX-ijX" firstAttribute="leading" secondItem="jwA-ap-2ls" secondAttribute="leading" id="53A-F1-Wty"/>
+                            <constraint firstItem="jwA-ap-2ls" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Bco-My-Y0A"/>
+                            <constraint firstItem="ONC-vA-jyd" firstAttribute="top" secondItem="bFu-HX-ijX" secondAttribute="bottom" constant="8" symbolic="YES" id="ICd-oR-707"/>
+                            <constraint firstItem="bFu-HX-ijX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N0a-Mt-Opa"/>
                             <constraint firstItem="jwA-ap-2ls" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VVR-3g-TmM"/>
-                            <constraint firstItem="lWS-rF-vWR" firstAttribute="top" secondItem="jwA-ap-2ls" secondAttribute="bottom" constant="50" id="lZr-ua-taW"/>
+                            <constraint firstItem="zZe-u6-kDQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="XEZ-Qz-5OD"/>
+                            <constraint firstItem="ONC-vA-jyd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YH4-UY-nPj"/>
+                            <constraint firstItem="bFu-HX-ijX" firstAttribute="top" secondItem="jwA-ap-2ls" secondAttribute="bottom" constant="8" symbolic="YES" id="hmY-a3-BQb"/>
+                            <constraint firstItem="zZe-u6-kDQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hy5-sk-oeP"/>
+                            <constraint firstItem="ONC-vA-jyd" firstAttribute="leading" secondItem="jwA-ap-2ls" secondAttribute="leading" id="llK-U6-epZ"/>
+                            <constraint firstItem="lWS-rF-vWR" firstAttribute="top" secondItem="ONC-vA-jyd" secondAttribute="bottom" constant="20" id="mBn-m4-tbL"/>
+                            <constraint firstItem="lWS-rF-vWR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="md8-ng-FCM"/>
+                            <constraint firstItem="lWS-rF-vWR" firstAttribute="leading" secondItem="jwA-ap-2ls" secondAttribute="leading" id="ujK-es-S11"/>
                             <constraint firstItem="lWS-rF-vWR" firstAttribute="centerX" secondItem="jwA-ap-2ls" secondAttribute="centerX" id="uuL-aJ-lRd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="timeTextField" destination="jwA-ap-2ls" id="cro-p6-nGy"/>
+                        <outlet property="displayLabel" destination="zZe-u6-kDQ" id="Wli-DA-N6V"/>
+                        <outlet property="firstTimeTextField" destination="jwA-ap-2ls" id="cro-p6-nGy"/>
+                        <outlet property="secondTimeTextField" destination="bFu-HX-ijX" id="Buq-0u-S6r"/>
+                        <outlet property="thirdTimeTextField" destination="ONC-vA-jyd" id="3qC-Ef-pTR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
