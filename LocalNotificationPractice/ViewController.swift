@@ -94,6 +94,11 @@ extension ViewController {
         let content = UNMutableNotificationContent()
         content.title = "初のローカル通知！"
         content.body = "成功してるかな〜"
+        if let path = Bundle.main.path(forResource: "ramen", ofType: "jpeg") {
+            content.attachments = [try! UNNotificationAttachment(identifier: "",
+                                                                 url: URL(fileURLWithPath: path),
+                                                                 options: nil)]
+        }
         return content
     }
     

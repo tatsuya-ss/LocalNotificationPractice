@@ -13,6 +13,7 @@
 		75003191271C3A7000971701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7500318F271C3A7000971701 /* Main.storyboard */; };
 		75003193271C3A7300971701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75003192271C3A7300971701 /* Assets.xcassets */; };
 		75003196271C3A7300971701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75003194271C3A7300971701 /* LaunchScreen.storyboard */; };
+		7590EA30272BC41A009137CD /* ramen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7590EA2F272BC41A009137CD /* ramen.jpeg */; };
 		75CC67D527279DA700AE4292 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC67D427279DA700AE4292 /* Timer.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		75003192271C3A7300971701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75003195271C3A7300971701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75003197271C3A7300971701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7590EA2F272BC41A009137CD /* ramen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ramen.jpeg; path = "../../../../Pictures/Photos Library.photoslibrary/resources/derivatives/7/ramen.jpeg"; sourceTree = "<group>"; };
 		75CC67D427279DA700AE4292 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				75003192271C3A7300971701 /* Assets.xcassets */,
 				75003194271C3A7300971701 /* LaunchScreen.storyboard */,
 				75003197271C3A7300971701 /* Info.plist */,
+				7590EA2F272BC41A009137CD /* ramen.jpeg */,
 			);
 			path = LocalNotificationPractice;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			files = (
 				75003196271C3A7300971701 /* LaunchScreen.storyboard in Resources */,
 				75003193271C3A7300971701 /* Assets.xcassets in Resources */,
+				7590EA30272BC41A009137CD /* ramen.jpeg in Resources */,
 				75003191271C3A7000971701 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
